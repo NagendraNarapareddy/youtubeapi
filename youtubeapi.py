@@ -63,14 +63,3 @@ def filter_shorts(videos):
                 })
     
     return shorts_videos
-
-handle = "@zomato"
-channel_id = get_channel_id_by_handle(handle)
-
-if channel_id:
-    videos = get_videos_from_channel(channel_id)
-    shorts = filter_shorts(videos)
-    for short in shorts:
-        print(short)
-else:
-    print("Channel not found.")
